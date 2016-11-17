@@ -129,7 +129,7 @@ namespace OnderwijsBlok6
             sub = (Sandwich)e;
             // sub = cerealBox;
             // e = cerealBox;
-            // e = (Edible)cerealBox;
+             e = (Edible)cerealBox;
             // e = (Rectangle)cerealBox;
             // e = (Rectangle)null;
         }
