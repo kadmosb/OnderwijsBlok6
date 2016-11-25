@@ -141,7 +141,7 @@ namespace OnderwijsBlok6
             // OpdrachtP8_6();
             // OpdrachtP9_8();
             // OpdrachtP9_14();
-            OpdrachtR9_14();
+            // OpdrachtR9_14();
             Console.ReadLine();
         }
     }
