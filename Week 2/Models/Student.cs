@@ -1,6 +1,7 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace OnderwijsBlok6.Week2
+namespace Week2.Models
 {
     public class Student
     {
@@ -14,5 +15,9 @@ namespace OnderwijsBlok6.Week2
         public byte[] Photo { get; set; }
         public decimal Height { get; set; }
         public float Weight { get; set; }
+        public int fkCountryID { get; set; }
+
+        [ForeignKey("fkCountryID")]
+        public virtual Country Country { get; set; }
     }
 }
