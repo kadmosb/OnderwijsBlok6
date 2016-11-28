@@ -1,7 +1,11 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations.Schema;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Week2.Models
+namespace Week3.Models
 {
     public class Student
     {
@@ -9,15 +13,10 @@ namespace Week2.Models
         {
         }
 
-        public int StudentID { get; set; }
+        [Key]
+        public int StudentKey { get; set; }
         public string StudentName { get; set; }
-        public DateTime DateOfBirth { get; set; }
-        public byte[] Photo { get; set; }
-        public decimal Height { get; set; }
-        public float Weight { get; set; }
-        public int fkCountryID { get; set; }
 
-        [ForeignKey("fkCountryID")]
         public virtual Country Country { get; set; }
     }
 }

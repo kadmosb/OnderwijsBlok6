@@ -3,24 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations;
+using Week3.Models;
 
-namespace Week2.Models
+namespace Week3.Models
 {
     public class Country
     {
         public Country ()
         {
-            Students = new List<Student>();
         }
 
         public int CountryID { get; set; }
-
-        [StringLength(2)]
         public string CountryCode { get; set; }
-        public string Name { get; set; }
-        public int NOInhabitants { get; set; }
-        public string Capital { get; set; }
-        public virtual IList<Student> Students { get; set; }
+        public string CountryName { get; set; }
+
+        public virtual List<Student> Studenten { get; set; }
     }
 }

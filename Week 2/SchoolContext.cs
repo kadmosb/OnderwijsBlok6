@@ -4,26 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
-using Week2.Models;
+using Week3.Models;
 
-namespace Week2
+namespace Week3
 {
     public class SchoolContext : DbContext 
     {
-        public SchoolContext() : base()
+        public SchoolContext() : base("SchoolDB")
         {
+            // Configuration.LazyLoadingEnabled = true;
         }
 
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            // modelBuilder.Entity<Student>()
-            //             .HasRequired<Country>(c => c.Country)
-            //             .WithMany(s => s.Students)
-            //             .HasForeignKey(s => s.fkCountryID);
-        }
-
-        public DbSet<Student> Students { get; set; }
-        public DbSet<Standard> Standards { get; set; } 
-        public DbSet<Country> Countries { get; set; }
+        public DbSet<Student> Studenten { get; set; }
+        public DbSet<Country> Country { get; set; }
     }
 }
