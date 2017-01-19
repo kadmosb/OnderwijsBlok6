@@ -21,9 +21,9 @@ namespace Week3
 
                 ctx.SaveChanges();
 
-                foreach (Student s in ctx.Studenten)
+                foreach (Student s in ctx.Studenten.Include("Country"))
                 {
-                    Console.WriteLine($"Naam van de studen is {s.StudentName}, ID is {s.StudentKey} en woont in {s.Country.CountryName}");
+                    Console.WriteLine($"Naam van de student is {s.StudentName}, ID is {s.StudentKey} en woont in {s.Country.CountryName}");
 
 /*
  *                    if (s.Country == null)
